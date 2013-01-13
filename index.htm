@@ -8,11 +8,15 @@
     <style type="text/css" media="all">
       body{
         text-align:center;  
+        background:url('./background.jpg') center center #4485e6;
+      }
+      h3{
+        color:#fff;  
       }
       #container{
-        width:600px;
+        width:500px;
         margin:0 auto;
-        border:1px solid #000;
+        border:0px solid #000;
         text-align:left;  
       }
       #list-snippets{
@@ -22,17 +26,43 @@
       .type{
        border:1px solid red;
       }
+      .style1{
+        color:red;
+      }
+      .style2{
+        color:blue;
+      }
+      .style3{
+        color:yellow;
+      }
+      .style4{
+        color:green;
+      }
+      .style5{
+        color:purple;
+      }
+      .code{
+        width:400px;
+        border:1px solid #000;
+        word-wrap:break-word; 
+        overflow:hidden;
+      }
     </style>
   </head>
   <body>
     <div id="container">
+    <div id="header">
+      <h3>
+        My Snippets document.
+      </h3>
+    </div>
       <select id="select">
         
       </select>
       <div id="list-snippets">
         
       </div>
-      <div id="test">
+      <div id="preview">
         
       </div>
     </div>
