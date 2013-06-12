@@ -537,6 +537,11 @@ snippet h
 	height: ${1};
 snippet h:a
 	height: auto;
+snippet @keyframes
+	@-webkit-keyframes ${1:name}{${2:.animation()}}
+		 @-moz-keyframes $1{$2}
+			@-ms-keyframes $1{$2}
+					@keyframes $1{$2}${3}
 snippet l
 	left: ${1};
 snippet l:a
