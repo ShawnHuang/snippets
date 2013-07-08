@@ -14,10 +14,8 @@ snippet .box-shadow
 	.box-shadow(${1:@arguments});${2}
 snippet .box-sizing
 	.box-sizing(${1:@sizing: border-box});${2}
-
 snippet .rounded
 	.rounded(${1:@radius: 2px});${2}
-
 snippet .border-radius
 	.border-radius(${1:@topright: 0}, ${2:@bottomright: 0}, ${3:@bottomleft: 0}, ${4:@topleft: 0});${5}
 snippet .opacity
@@ -39,4 +37,39 @@ snippet .user-select
 snippet .columns
 	.columns(${1:@colwidth: 250px}, ${2:@colcount: 0}, ${3:@colgap: 50px}, ${4:@columnRuleColor: #EEE}, ${5:@columnRuleStyle: solid}, ${6:@columnRuleWidth: 1px});${7}
 
+#---------------add by 2013/07/08-------------------------------
+snippet .transition-delay
+	.transition-delay(${1:@duration: 0.2s});${2}
 
+snippet .animation
+	.animation(${1:@arguments});${2}
+snippet .animation-duration
+	.animation-duration(${1:@arguments});${2}
+snippet .animation-delay
+	.animation-delay(${1:@arguments});${2}
+snippet .animation-timing-function
+	.animation-timing-function(${1:@arguments});${2}
+snippet .perspective
+	.perspective(${1:@argument: 1200px});${2}
+snippet .backface-visibility
+	.backface-visibility(${1:@argument: hidden});${2}
+snippet .transform-style
+	.transform-style(${1:@argument: preserve-3d});${2}
+snippet .transform-origin
+	.transform-origin(${1:@argument:10% 10% 10%);${2}
+snippet .display
+	.display(${1:@value|flex|inline-flex});${2}
+snippet .flex
+	.flex(${1:@flex});${2}
+snippet .flex-direction
+	.flex-direction(${1:@direction|row|row-reverse|column|column-reverse});${2}
+snippet .order
+	.order(${1:@order});${2}
+snippet .flex-wrap
+	.flex-wrap(${1:@wrap-method|wrap|wrap-reverse|nowrap});${2}
+snippet .align-items
+	.align-items(${1:@values});${2}
+snippet .align-self
+	.align-self(${1:@values});${2}
+snippet .justify-content
+	.justify-content(${1:@value|flex-end|flex-start});${2}
