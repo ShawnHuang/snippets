@@ -2,20 +2,32 @@ snippet .
 	${1} {
 		${2}
 	}
+snippet hover
+	${1}:hover{
+		${2}	
+	}
+snippet first-child
+	${1}:first-child{
+		${2}
+	}
+snippet nth-child
+	${1}:nth-child(${2}){
+		${3}
+	}
 snippet !
 	 !important
 snippet bdi:m+
-	-moz-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};
+	-moz-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${8}
 snippet bdi:m
-	-moz-border-image: ${1};
+	-moz-border-image: ${1};${2}
 snippet bdrz:m
-	-moz-border-radius: ${1};
+	-moz-border-radius: ${1};${2}
 snippet bxsh:m+
-	-moz-box-shadow: ${1:0} ${2:0} ${3:0} #${4:000};
+	-moz-box-shadow: ${1:0} ${2:0} ${3:0} #${4:000};${5}
 snippet bxsh:m
-	-moz-box-shadow: ${1};
+	-moz-box-shadow: ${1};${2}
 snippet bdi:w+
-	-webkit-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};
+	-webkit-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${8}
 snippet bdi:w
 	-webkit-border-image: ${1};
 snippet bdrz:w
@@ -102,7 +114,7 @@ snippet bgz:ct
 snippet bgz:cv
 	background-size: cover;
 snippet bg
-	background: ${1};
+	background: ${1};${2}
 snippet bg:ie
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1}',sizingMethod='${2:crop}');
 snippet bg:n
@@ -290,7 +302,7 @@ snippet bdt:n
 snippet bdw
 	border-width: ${1};
 snippet bd
-	border: ${1};
+	border: ${1};${2}
 snippet bd:n
 	border: none;
 snippet b
@@ -332,7 +344,7 @@ snippet cp:a
 snippet cp:r
 	clip: rect(${1:0} ${2:0} ${3:0} ${4:0});
 snippet c
-	color: #${1:000};
+	color: #${1:000};${2}
 snippet ct
 	content: ${1};
 snippet ct:a
@@ -356,7 +368,7 @@ snippet coi
 snippet cor
 	counter-reset: ${1};
 snippet cur
-	cursor: ${1};
+	cursor: ${1};${2}
 snippet cur:a
 	cursor: auto;
 snippet cur:c
@@ -374,7 +386,7 @@ snippet cur:p
 snippet cur:t
 	cursor: text;
 snippet d
-	display: ${1};
+	display: ${1};${2}
 snippet d:mib
 	display: -moz-inline-box;
 snippet d:mis
@@ -478,7 +490,7 @@ snippet fza
 snippet fza:n
 	font-size-adjust: none;
 snippet fz
-	font-size: ${1};
+	font-size: ${1};${2}
 snippet fsm
 	font-smooth: ${1};
 snippet fsm:aw
@@ -522,7 +534,7 @@ snippet fv:n
 snippet fv:sc
 	font-variant: small-caps;
 snippet fw
-	font-weight: ${1};
+	font-weight: ${1};${2}
 snippet fw:b
 	font-weight: bold;
 snippet fw:br
@@ -534,22 +546,23 @@ snippet fw:n
 snippet f
 	font: ${1};
 snippet h
-	height: ${1};
+	height: ${1};${2}
 snippet h:a
 	height: auto;
 snippet @keyframes
 	@-webkit-keyframes ${1:name}{${2:.animation()}}
 		 @-moz-keyframes $1{$2}
 			@-ms-keyframes $1{$2}
-					@keyframes $1{$2}${3}
+					@keyframes $1{$2}
+	${3}
 snippet l
-	left: ${1};
+	left: ${1};${2}
 snippet l:a
 	left: auto;
 snippet lts
 	letter-spacing: ${1};
 snippet lh
-	line-height: ${1};
+	line-height: ${1};${2}
 snippet lisi
 	list-style-image: url(${1});
 snippet lisi:n
@@ -561,7 +574,7 @@ snippet lisp:i
 snippet lisp:o
 	list-style-position: outside;
 snippet list
-	list-style-type: ${1};
+	list-style-type: ${1};${2}
 snippet list:c
 	list-style-type: circle;
 snippet list:dclz
@@ -579,7 +592,7 @@ snippet list:s
 snippet list:ur
 	list-style-type: upper-roman;
 snippet lis
-	list-style: ${1};
+	list-style: ${1};${2}
 snippet lis:n
 	list-style: none;
 snippet mb
@@ -599,7 +612,7 @@ snippet mt
 snippet mt:a
 	margin-top: auto;
 snippet m
-	margin: ${1};
+	margin: ${1};${2}
 snippet m:4
 	margin: ${1:0} ${2:0} ${3:0} ${4:0};
 snippet m:3
@@ -611,19 +624,19 @@ snippet m:0
 snippet m:a
 	margin: auto;
 snippet mah
-	max-height: ${1};
+	max-height: ${1};${2}
 snippet mah:n
 	max-height: none;
 snippet maw
-	max-width: ${1};
+	max-width: ${1};${2}
 snippet maw:n
 	max-width: none;
 snippet mih
-	min-height: ${1};
+	min-height: ${1};${2}
 snippet miw
-	min-width: ${1};
+	min-width: ${1};${2}
 snippet op
-	opacity: ${1};
+	opacity: ${1};${2}
 snippet op:ie
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=${1:100});
 snippet op:ms
@@ -679,7 +692,7 @@ snippet ovy:s
 snippet ovy:v
 	overflow-y: visible;
 snippet ov
-	overflow: ${1};
+	overflow: ${1};${2}
 snippet ov:a
 	overflow: auto;
 snippet ov:h
@@ -697,7 +710,7 @@ snippet pr
 snippet pt
 	padding-top: ${1};
 snippet p
-	padding: ${1};
+	padding: ${1};${2}
 snippet p:4
 	padding: ${1:0} ${2:0} ${3:0} ${4:0};
 snippet p:3
@@ -733,7 +746,7 @@ snippet pgbi:a
 snippet pgbi:av
 	page-break-inside: avoid;
 snippet pos
-	position: ${1};
+	position: ${1};${2}
 snippet pos:a
 	position: absolute;
 snippet pos:f
@@ -751,7 +764,7 @@ snippet q:n
 snippet q:ru
 	quotes: '\00AB' '\00BB' '\201E' '\201C';
 snippet rz
-	resize: ${1};
+	resize: ${1};${2}
 snippet rz:b
 	resize: both;
 snippet rz:h
@@ -761,17 +774,17 @@ snippet rz:n
 snippet rz:v
 	resize: vertical;
 snippet r
-	right: ${1};
+	right: ${1};${2}
 snippet r:a
 	right: auto;
 snippet tbl
-	table-layout: ${1};
+	table-layout: ${1};${2}
 snippet tbl:a
 	table-layout: auto;
 snippet tbl:f
 	table-layout: fixed;
 snippet tal
-	text-align-last: ${1};
+	text-align-last: ${1};${2}
 snippet tal:a
 	text-align-last: auto;
 snippet tal:c
@@ -781,7 +794,7 @@ snippet tal:l
 snippet tal:r
 	text-align-last: right;
 snippet ta
-	text-align: ${1};
+	text-align: ${1};${2}
 snippet ta:c
 	text-align: center;
 snippet ta:l
@@ -789,7 +802,7 @@ snippet ta:l
 snippet ta:r
 	text-align: right;
 snippet td
-	text-decoration: ${1};
+	text-decoration: ${1};${2}
 snippet td:l
 	text-decoration: line-through;
 snippet td:n
@@ -815,7 +828,7 @@ snippet te:dt
 snippet te:n
 	text-emphasis: none;
 snippet th
-	text-height: ${1};
+	text-height: ${1};${2}
 snippet th:a
 	text-height: auto;
 snippet th:f
@@ -857,11 +870,11 @@ snippet tr:n
 snippet tsh+
 	text-shadow: ${1:0} ${2:0} ${3:0} #${4:000};
 snippet tsh
-	text-shadow: ${1};
+	text-shadow: ${1};${2}
 snippet tsh:n
 	text-shadow: none;
 snippet tt
-	text-transform: ${1};
+	text-transform: ${1};${2}
 snippet tt:c
 	text-transform: capitalize;
 snippet tt:l
@@ -881,7 +894,7 @@ snippet tw:s
 snippet tw:u
 	text-wrap: unrestricted;
 snippet t
-	top: ${1};
+	top: ${1};${2}
 snippet t:a
 	top: auto;
 snippet va
@@ -903,7 +916,7 @@ snippet va:tt
 snippet va:t
 	vertical-align: top;
 snippet v
-	visibility: ${1};
+	visibility: ${1};${2}
 snippet v:c
 	visibility: collapse;
 snippet v:h
@@ -935,9 +948,9 @@ snippet whs:pw
 snippet whs:p
 	white-space: pre;
 snippet wid
-	widows: ${1};
+	widows: ${1};${2}
 snippet w
-	width: ${1};
+	width: ${1};${2}
 snippet w:a
 	width: auto;
 snippet wob
@@ -965,7 +978,7 @@ snippet wow:s
 snippet wow:u
 	word-wrap: unrestricted;
 snippet z
-	z-index: ${1};
+	z-index: ${1};${2}
 snippet z:a
 	z-index: auto;
 snippet zoo
